@@ -10,7 +10,7 @@ html
     body
 
         header
-
+        my-app
         div#content(ui-view="module-content")
 
         footer
@@ -18,8 +18,6 @@ html
         script.
             var GLOBAL_USER_ID = '#{userId}';
 
-        script(src="node_modules/angular2/bundles/angular2-polyfills.js")
-        script(src="node_modules/rxjs/bundles/Rx.umd.js")
-        script(src="node_modules/angular2/bundles/angular2-all.umd.js")
-
-        script(src=locals.way + 'search-app.js')
+        script(src=locals.way + '../../build/scripts/vendor.js')
+        script(src=locals.way + '../../build/scripts/search.bundle.js')
+        
