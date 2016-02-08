@@ -1,4 +1,5 @@
 # angular-spa
+Web pack is NOT used. All configs are for app with angular 1.x version. Fill be fixed...
 
 Build packages
 -------------------------------
