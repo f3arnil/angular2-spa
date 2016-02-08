@@ -1,0 +1,21 @@
+{
+  "name": "pxts",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "async": "*",
+    "express": "3.0.x",
+    "jade": ">= 0.0.1",
+    "mongoose": "4.2.x",
+    "mongoose-unique-validator": "*",
+    "underscore": "*"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "0.16.x",
+    "npm": "3.3.x"
+  }
+}

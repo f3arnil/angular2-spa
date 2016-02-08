@@ -1,0 +1,8 @@
+{
+    "name": "index",
+    "version": "0.1",
+    "description": "Index page routes",
+    "main": "index.js",
+    "scripts": {},
+    "author": "Maksim Tarhunakau"
+}

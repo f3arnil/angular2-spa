@@ -1,0 +1,16 @@
+extends /layout
+block content_global
+    h1 #{title}
+    aside#left-sider
+        h4 navigation
+        nav
+            ul.navigation-menu
+                li.navigation-link
+                    a Sample Link 1
+                li.navigation-link
+                    a Sample Link 1
+                li.navigation-link
+                    a Sample Link 1
+    aside#content-sider
+        h4 #{subtitle}
+        .page-content #{content}

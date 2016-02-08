@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        title Learn Angular!
+        meta(charset="utf-8")
+        base(href="/")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="../../build/styles/styles.css")
+
+    body
+
+        header
+
+        div#content(ui-view="module-content")
+
+        footer
+
+        script.
+            var GLOBAL_USER_ID = '#{userId}';
+
+        script(src="node_modules/angular2/bundles/angular2-polyfills.js")
+        script(src="node_modules/rxjs/bundles/Rx.umd.js")
+        script(src="node_modules/angular2/bundles/angular2-all.umd.js")
+
+        script(src=locals.way + 'search-app.js')

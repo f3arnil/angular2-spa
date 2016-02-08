@@ -1,0 +1,8 @@
+{
+    "name": "admin",
+    "version": "0.1",
+    "description": "Admin page routes",
+    "main": "index.js",
+    "scripts": {},
+    "author": "Maksim Tarhunakau"
+}

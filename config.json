@@ -1,0 +1,30 @@
+{
+    "application": {
+        "port": "3000"
+    },
+    "mongoose": {
+        "user": "admin",
+        "pass": "admin",
+        "host": "ds047504.mongolab.com",
+        "port": "47504",
+        "database": "sandbox"
+    },
+    "angular": {
+        "rootDirectory": "angular-spa-ui"
+    },
+    "search": {
+        "startFrom": 0,
+        "searchIn": "publication",
+        "orderBy": "title",
+        "sortBy": "ASC",
+        "field": "title",
+        "validSearchEntities": {
+            "article": [
+                "title"
+            ],
+            "publication": [
+                "title"
+            ]
+        }
+    }
+}
