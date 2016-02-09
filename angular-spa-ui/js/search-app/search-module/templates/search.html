@@ -1,0 +1,31 @@
+
+    <div class="search-panel">
+        <div class="wrapper">
+            <div class="colLeftPanel">
+                <label>SEARCH:</label>
+                <div ng-model="search.model.searchIn">
+                    <a ng-repeat="searchplace in search.model.searchInList" ng-click="search.viewApi.setSearchIn(searchplace.value)" ng-model="search.model.searchIn.value" ng-class="{active : searchplace.value==search.model.searchIn.value }">
+                        {{searchplace.title}}
+                    </a>
+                </div>
+            </div>
+            <div class="colRightPanel">
+                <div class="search">
+                    <input autofocus type="text" value="" ng-model='search.model.query' ng-keydown="search.viewApi.enterKeyPressed($event)"/>
+                    <a class="searchButton" ng-click="search.viewApi.find()">
+                        <img ng-src="/img/search-button.png">
+                    </a>
+                </div>
+                <div class="advancedSearch">
+                    <button type="button" class="btn btn-primary" ng-click="modal()">Advanced</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <records-list
+                  header-settings='search.model.headerConfig'
+                  items-settings='search.model.itemConfig'
+                  items-List='search.model.itemsList'
+                  ng-model='search.model'>
+    </records-list>
+

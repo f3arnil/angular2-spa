@@ -10,11 +10,13 @@ html
     body
 
         header
-        my-app
+        div(my-app)
+        display
+        greet
         div#content(ui-view="module-content")
 
         footer
-
+        
         script.
             var GLOBAL_USER_ID = '#{userId}';
 
