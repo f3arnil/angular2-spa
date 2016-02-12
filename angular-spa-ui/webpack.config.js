@@ -21,18 +21,45 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,   loader: "url?limit=10000&mimetype=application/font-woff" },
-            { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,  loader: "url?limit=10000&mimetype=application/font-woff" },
-            { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,    loader: "url?limit=10000&mimetype=application/octet-stream" },
-            { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,    loader: "file" },
-            { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,    loader: "url?limit=10000&mimetype=image/svg+xml" }
+            {
+                test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "url?limit=10000&mimetype=application/font-woff"
+            },
+            {
+                test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "url?limit=10000&mimetype=application/font-woff"
+            },
+            {
+                test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "url?limit=10000&mimetype=application/octet-stream"
+            },
+            {
+                test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "file"
+            },
+            {
+                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "url?limit=10000&mimetype=image/svg+xml"
+            },
+            {
+                test: /\.js$/,
+                loader: 'babel?presets[]=es2015'
+            }
+//            {
+//                test: "\.jpg$",
+//                loader: "file-loader"
+//            },
+//            {
+//                test: "\.png$",
+//                loader: "url-loader?mimetype=image/png"
+//            }
         ]
     },
     plugins: [
 
         new webpack.ProvidePlugin({
             _: 'underscore'
-            //angular: 'exports?window.angular!angular'
+//                angular: 'exports?window.angular!angular'
         }),
         new CommonsChunkPlugin('vendor', 'vendor.js'),
         new ExtractTextPlugin('../styles/styles.css', {
