@@ -43,23 +43,23 @@ module.exports = {
             },
             {
                 test: /\.js$/,
+                exclude: /node_modules/,
                 loader: 'babel?presets[]=es2015'
+            },
+            {
+                test: "\.jpg$",
+                loader: "file-loader"
+            },
+            {
+                test: "\.png$",
+                loader: "url-loader?mimetype=image/png"
             }
-//            {
-//                test: "\.jpg$",
-//                loader: "file-loader"
-//            },
-//            {
-//                test: "\.png$",
-//                loader: "url-loader?mimetype=image/png"
-//            }
         ]
     },
     plugins: [
 
         new webpack.ProvidePlugin({
             _: 'underscore'
-//                angular: 'exports?window.angular!angular'
         }),
         new CommonsChunkPlugin('vendor', 'vendor.js'),
         new ExtractTextPlugin('../styles/styles.css', {
