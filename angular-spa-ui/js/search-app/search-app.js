@@ -2,7 +2,6 @@
 
 console.log('Hello world from search simple!');
 
-import 'reflect-metadata';
 import 'es6-shim';
 import 'angular2/bundles/angular2-polyfills'
 
